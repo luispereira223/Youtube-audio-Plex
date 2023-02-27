@@ -241,9 +241,9 @@ async def ArtistFolderCreate():
 
 
     else: 
-        make_artist_folder = os.mkdir("/srv/dev-disk-by-uuid-b629cc39-f88f-4413-b4e4-da0ad4d954f8/Music/" + str(artist_name))  ##### CHANGE /SRV TO YOUR OPENMEDIAVAULT PATH
-        make_artist_albumid = os.mkdir("/srv/dev-disk-by-uuid-b629cc39-f88f-4413-b4e4-da0ad4d954f8/Music/" + str(artist_name) + "/" + "01") ##### CHANGE /SRV TO YOUR OPENMEDIAVAULT PATH
-        shutil.move(file_location, '/srv/dev-disk-by-uuid-b629cc39-f88f-4413-b4e4-da0ad4d954f8/Music/' + artist_name + "/" + "01" + "/" + file_location) ##### CHANGE /SRV TO YOUR OPENMEDIAVAULT PATH
+        make_artist_folder = os.mkdir("/srv/dev-disk-by-uuid-b629cc39-f88f-4413-b4e4-da0ad4d954f8/Music/" + str(artist_name))  ##### CHANGE /SRV TO YOUR OPENMEDIAVAULT PATH MAKE SURE IT ENDS WITH /
+        make_artist_albumid = os.mkdir("/srv/dev-disk-by-uuid-b629cc39-f88f-4413-b4e4-da0ad4d954f8/Music/" + str(artist_name) + "/" + "01") ##### CHANGE /SRV TO YOUR OPENMEDIAVAULT PATH MAKE SURE IT ENDS WITH /
+        shutil.move(file_location, '/srv/dev-disk-by-uuid-b629cc39-f88f-4413-b4e4-da0ad4d954f8/Music/' + artist_name + "/" + "01" + "/" + file_location) ##### CHANGE /SRV TO YOUR OPENMEDIAVAULT PATH MAKE SURE IT ENDS WITH /
         print("folder created and song moved")
         channel = client.get_channel(channel_id1)
         await channel.send("Download completed! :)")
