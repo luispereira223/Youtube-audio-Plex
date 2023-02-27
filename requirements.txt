@@ -1,0 +1,6 @@
+requests
+yt_dlp
+discord
+eyed3
+musicbrainzngs
+pydub
